@@ -26,15 +26,15 @@ body {
   grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
-.calculator-grid>button {
+.calculator-grid > button {
   cursor: pointer;
   font-size: 2rem;
-  border: 1px, solid #FFF;
+  border: 1px, solid #fff;
   outline: none;
   background-color: rbga(255 255 255 75%);
 }
 
-.calculator-grid>button:hover {
+.calculator-grid > button:hover {
   background-color: #a9a9a9;
 }
 
