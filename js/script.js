@@ -10,27 +10,28 @@
 
 // This is Calculator Class
 class Calculator {
+// Constructor
   constructor(previousOperandTextElement, currentOperandTextElement) {
     this.previousOperandTextElement = previousOperandTextElement
     this.currentOperandTextElement = currentOperandTextElement
     this.clear()
   }
-
+// This is clear method
   clear() {
     this.currentOperand = ""
     this.previousOperand = ""
     this.operation = undefined
   }
-
+// This is Delete method
   delete() {
     this.currentOperand = this.currentOperand.toString().slice(0, -1)
   }
-
+// This is appendNumber method
   appendNumber(number) {
     if (number === "." && this.currentOperand.includes(".")) return
     this.currentOperand = this.currentOperand.toString() + number.toString()
   }
-
+// This is chooseOperation method
   chooseOperation(operation) {
     if (this.currentOperand === "") return
     if (this.previousOperand !== "") {
@@ -40,7 +41,7 @@ class Calculator {
     this.previousOperand = this.currentOperand
     this.currentOperand = ""
   }
-
+// This is compute method
   compute() {
     let computation
     const prev = parseFloat(this.previousOperand)
@@ -66,7 +67,7 @@ class Calculator {
     this.operation = undefined
     this.previousOperand = ""
   }
-
+// This is DisplayNumber method
   getDisplayNumber(number) {
     const stringNumber = number.toString()
     const integerDigits = parseFloat(stringNumber.split(".")[0])
@@ -85,7 +86,7 @@ class Calculator {
       return integerDisplay
     }
   }
-
+// This is updateDisplay method
   updateDisplay() {
     this.currentOperandTextElement.innerText = this.getDisplayNumber(
       this.currentOperand
@@ -99,6 +100,7 @@ class Calculator {
     }
   }
 }
+
 
 const numberButtons = document.querySelectorAll("[data-number]")
 const operationButtons = document.querySelectorAll("[data-operation]")
