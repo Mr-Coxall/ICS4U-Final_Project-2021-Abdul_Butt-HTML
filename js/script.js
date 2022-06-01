@@ -11,27 +11,28 @@
 // This is Calculator Class
 /** This is a description of the foo function. */
 class Calculator {
+  /** Constructor doc */
   constructor(previousOperandTextElement, currentOperandTextElement) {
     this.previousOperandTextElement = previousOperandTextElement
     this.currentOperandTextElement = currentOperandTextElement
     this.clear()
   }
-/** This is a description of the foo function. */
+  /** This is a description of the foo function. */
   clear() {
     this.currentOperand = ""
     this.previousOperand = ""
     this.operation = undefined
   }
-/** This is a description of the foo function. */
+  /** This is a description of the foo function. */
   delete() {
     this.currentOperand = this.currentOperand.toString().slice(0, -1)
   }
-/** This is a description of the foo function. */
+  /** This is a description of the foo function. */
   appendNumber(number) {
     if (number === "." && this.currentOperand.includes(".")) return
     this.currentOperand = this.currentOperand.toString() + number.toString()
   }
-/** This is a description of the foo function. */
+  /** This is a description of the foo function. */
   chooseOperation(operation) {
     if (this.currentOperand === "") return
     if (this.previousOperand !== "") {
@@ -41,7 +42,7 @@ class Calculator {
     this.previousOperand = this.currentOperand
     this.currentOperand = ""
   }
-/** This is a description of the foo function. */
+  /** This is a description of the foo function. */
   compute() {
     let computation
     const prev = parseFloat(this.previousOperand)
@@ -67,7 +68,7 @@ class Calculator {
     this.operation = undefined
     this.previousOperand = ""
   }
-/** This is a description of the foo function. */
+  /** This is a description of the foo function. */
   getDisplayNumber(number) {
     const stringNumber = number.toString()
     const integerDigits = parseFloat(stringNumber.split(".")[0])
@@ -86,7 +87,7 @@ class Calculator {
       return integerDisplay
     }
   }
-/** This is a description of the foo function. */
+  /** This is a description of the foo function. */
   updateDisplay() {
     this.currentOperandTextElement.innerText = this.getDisplayNumber(
       this.currentOperand
@@ -100,8 +101,6 @@ class Calculator {
     }
   }
 }
-
-
 const numberButtons = document.querySelectorAll("[data-number]")
 const operationButtons = document.querySelectorAll("[data-operation]")
 const equalsButton = document.querySelector("[data-equals]")
