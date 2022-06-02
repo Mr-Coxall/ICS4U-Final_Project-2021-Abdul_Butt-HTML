@@ -57,7 +57,11 @@ body {
 }
 
 .output .previous-operand {
+<<<<<<< HEAD
   color: rgba(255, 255, 255, 0.75y);
+=======
+  color: rgba(255, 255, 255, 0.75);
+>>>>>>> 241554f16c59b8472670626d126745583225b512
   font-size: 1.5rem;
 }
 
@@ -65,3 +69,6 @@ body {
   color: white;
   font-size: 2.5rem;
 }
+/* stylelint-disable */
+a {}
+/* stylelint-enable */
