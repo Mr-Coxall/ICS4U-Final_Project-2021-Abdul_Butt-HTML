@@ -1,6 +1,6 @@
 {
     "extends": "stylelint-config-standard",
      "rules": {
-        "color-function-notation": ["modern", { "disableFix": true }]
+        "color-function-notation": "space" | "comma"
     }
  }
