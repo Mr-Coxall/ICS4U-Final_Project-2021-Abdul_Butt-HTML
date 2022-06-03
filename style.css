@@ -3,6 +3,8 @@
 * This file contains the CSS for index.html
 */
 
+/* stylelint-disable */
+a {
 *,
 *::before,
 *::after {
@@ -64,4 +66,5 @@ body {
 .output .current-operand {
   color: white;
   font-size: 2.5rem;
+}
 }
