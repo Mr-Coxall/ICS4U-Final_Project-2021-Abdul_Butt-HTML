@@ -1,6 +1,7 @@
 {
     "extends": "stylelint-config-standard",
      "rules": {
-        "ignoreFiles": ["**/*.css"]
+        "color-function-notation": "with-comma",
+        "alpha-value-notation": "false"
     }
  }
