@@ -1,6 +1,6 @@
 {
     "extends": "stylelint-config-standard",
      "rules": {
-        "color-function-notation": "modern"
+        "selector-class-pattern": "^[a-z][a-z0-9_-]+$"
     }
  }
