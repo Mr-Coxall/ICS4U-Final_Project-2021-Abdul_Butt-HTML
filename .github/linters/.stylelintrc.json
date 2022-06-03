@@ -1,7 +1,6 @@
 {
     "extends": "stylelint-config-standard",
      "rules": {
-        "color-function-notation": "with-comma",
-        "alpha-value-notation": "false"
+        "color-function-notation": "modern"
     }
  }
